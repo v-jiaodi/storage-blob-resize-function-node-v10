@@ -29,7 +29,7 @@ const serviceURL = new ServiceURL(
   pipeline
 );
 
-module.exports = (context, eventGridEvent, inputBlob) => {  
+module.exports = async (context, eventGridEvent, inputBlob) => {  
 
   const aborter = Aborter.timeout(30 * ONE_MINUTE);
   const widthInPixels = 100;
